@@ -7,3 +7,5 @@ Creación de Sistema de Control de Asistencia sobre la Identificación Estudiant
 
 - Nombre: Edvin Estuardo Pérez Garcia
 - Carné: 1904002011
+## IMAGEN - LOGO UDEO
+![LogoUDEO](IMG_README/LogoUDEO.png)
