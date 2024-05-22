@@ -8,7 +8,7 @@ namespace UDEOASIS
 {
     internal class Connection
     {
-        private MySqlConnection conexion;
+     /* private MySqlConnection conexion;
         private string server = "localhost";
         private string database = "";
         private string user = "root";
@@ -25,6 +25,6 @@ namespace UDEOASIS
         public MySqlConnection GetConnection()
         {
 
-        }
+        }*/
     }
 }
