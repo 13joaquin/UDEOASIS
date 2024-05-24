@@ -47,7 +47,7 @@ namespace UDEOASIS
                 {
                     MessageBox.Show("Successful");
                     this.Hide();
-                    MainForm mf = new MainForm();
+                    BarraForm1 mf = new BarraForm1();
                     mf.Show();
                 }
                 else
@@ -68,6 +68,11 @@ namespace UDEOASIS
         {
             label_hora.Text = DateTime.Now.ToLongTimeString();
             lbl_fecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

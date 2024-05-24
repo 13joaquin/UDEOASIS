@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             button1 = new Button();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -43,40 +40,27 @@
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(173, 21);
+            label1.Location = new Point(123, 138);
             label1.Name = "label1";
             label1.Size = new Size(426, 71);
             label1.TabIndex = 2;
             label1.Text = "Bienvenidos";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(30, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(125, 94);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(634, 455);
-            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(button1);
             Name = "Login";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -85,6 +69,5 @@
 
         private Button button1;
         private Label label1;
-        private PictureBox pictureBox1;
     }
 }

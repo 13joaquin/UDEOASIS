@@ -42,6 +42,7 @@
             label_hora = new Label();
             lbl_fecha = new Label();
             horafecha = new System.Windows.Forms.Timer(components);
+            btnSalir = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -72,7 +73,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 74);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(238, 369);
+            pictureBox1.Size = new Size(238, 290);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -146,10 +147,10 @@
             // lbl_fecha
             // 
             lbl_fecha.AutoSize = true;
-            lbl_fecha.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_fecha.Location = new Point(351, 115);
+            lbl_fecha.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_fecha.Location = new Point(306, 117);
             lbl_fecha.Name = "lbl_fecha";
-            lbl_fecha.Size = new Size(91, 38);
+            lbl_fecha.Size = new Size(76, 31);
             lbl_fecha.TabIndex = 15;
             lbl_fecha.Text = "label1";
             // 
@@ -158,12 +159,24 @@
             horafecha.Enabled = true;
             horafecha.Tick += horafecha_Tick;
             // 
+            // btnSalir
+            // 
+            btnSalir.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            btnSalir.Location = new Point(12, 400);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(89, 43);
+            btnSalir.TabIndex = 16;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(634, 455);
+            Controls.Add(btnSalir);
             Controls.Add(lbl_fecha);
             Controls.Add(label_hora);
             Controls.Add(Loginbutton);
@@ -198,5 +211,6 @@
         private Label label_hora;
         private Label lbl_fecha;
         private System.Windows.Forms.Timer horafecha;
+        private Button btnSalir;
     }
 }
