@@ -13,11 +13,16 @@ namespace UDEOASIS
 
 
         }
-        /*
-                    LoginForm mff = new LoginForm();
-                    this.Hide();
-                    mff.Show();
 
-         */
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginForm mff = new LoginForm();
+            this.Hide();
+            mff.Show();
+        }
+        
+          
+
+
     }
 }

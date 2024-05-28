@@ -64,15 +64,20 @@ namespace UDEOASIS
             }
         }
 
-        private void horafecha_Tick(object sender, EventArgs e)
-        {
-            label_hora.Text = DateTime.Now.ToLongTimeString();
-            lbl_fecha.Text = DateTime.Now.ToLongDateString();
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void BtnMin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -34,30 +34,33 @@
             // 
             // button1
             // 
-            button1.Location = new Point(528, 414);
+            button1.Location = new Point(462, 310);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(94, 29);
+            button1.Size = new Size(82, 22);
             button1.TabIndex = 0;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Stencil", 36F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(123, 138);
+            label1.Location = new Point(108, 104);
             label1.Name = "label1";
-            label1.Size = new Size(426, 71);
+            label1.Size = new Size(343, 57);
             label1.TabIndex = 2;
             label1.Text = "Bienvenidos";
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(634, 455);
+            ClientSize = new Size(555, 341);
             Controls.Add(label1);
             Controls.Add(button1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Login";
             Text = "Form1";
             Load += Form1_Load;

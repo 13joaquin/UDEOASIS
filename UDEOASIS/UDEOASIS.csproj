@@ -6,14 +6,18 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>15d91347-3aea-4e56-84f7-ad99c615aab1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Icons\Login\" />
+    <Folder Include="Imgs\Login\" />
     <Folder Include="IMG_PROYECT\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CircularProgressBar" Version="2.8.0.16" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.1" />
     <PackageReference Include="MySql.Data" Version="8.4.0" />
   </ItemGroup>
 
