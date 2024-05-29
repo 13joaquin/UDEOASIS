@@ -16,5 +16,22 @@ namespace UDEOASIS
         {
             InitializeComponent();
         }
+
+        private void BarraForm1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerBARRA_Tick(object sender, EventArgs e)
+        {
+            panelbARRA.Width += 3;
+            if (panelbARRA.Width >= 600)
+            {
+                timerBARRA.Stop();
+                MainForm main = new MainForm();
+                main.Show();
+                this.Hide();
+            }
+        }
     }
 }

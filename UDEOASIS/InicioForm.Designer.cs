@@ -28,33 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            components = new System.ComponentModel.Container();
+            lblFecha = new Label();
+            lblHora = new Label();
+            timerHoraFecha = new System.Windows.Forms.Timer(components);
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblFecha
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(296, 184);
-            label1.Name = "label1";
-            label1.Size = new Size(52, 20);
-            label1.TabIndex = 0;
-            label1.Text = "INICIO";
+            lblFecha.AutoSize = true;
+            lblFecha.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFecha.Location = new Point(93, 241);
+            lblFecha.Name = "lblFecha";
+            lblFecha.Size = new Size(109, 46);
+            lblFecha.TabIndex = 1;
+            lblFecha.Text = "label1";
+            // 
+            // lblHora
+            // 
+            lblHora.AutoSize = true;
+            lblHora.Font = new Font("Segoe UI", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHora.Location = new Point(114, 152);
+            lblHora.Name = "lblHora";
+            lblHora.Size = new Size(214, 89);
+            lblHora.TabIndex = 2;
+            lblHora.Text = "label1";
+            // 
+            // timerHoraFecha
+            // 
+            timerHoraFecha.Enabled = true;
+            timerHoraFecha.Tick += timerHoraFecha_Tick;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Logo_Vertical;
+            pictureBox1.Location = new Point(437, 48);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(324, 345);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // InicioForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            Controls.Add(pictureBox1);
+            Controls.Add(lblHora);
+            Controls.Add(lblFecha);
             FormBorderStyle = FormBorderStyle.None;
             Name = "InicioForm";
             Text = "InicioForm";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
+        private Label lblFecha;
+        private Label lblHora;
+        private System.Windows.Forms.Timer timerHoraFecha;
+        private PictureBox pictureBox1;
     }
 }

@@ -1,9 +1,9 @@
 
 namespace UDEOASIS
 {
-    public partial class Login : Form
+    public partial class RegistroFrom : Form
     {
-        public Login()
+        public RegistroFrom()
         {
             InitializeComponent();
         }
@@ -20,8 +20,8 @@ namespace UDEOASIS
             this.Hide();
             mff.Show();
         }
-        
-          
+
+
 
 
     }

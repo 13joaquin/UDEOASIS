@@ -1,6 +1,6 @@
 ﻿namespace UDEOASIS
 {
-    partial class Login
+    partial class RegistroFrom
     {
         /// <summary>
         ///  Required designer variable.

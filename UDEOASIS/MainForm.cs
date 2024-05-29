@@ -70,5 +70,26 @@ namespace UDEOASIS
             this.panel_Contenedor.Tag = fh;
             fh.Show();
         }
+        private void AbrirFormHija(object formhija)
+        {
+            if (this.panel_Contenedor.Controls.Count > 0)
+                this.panel_Contenedor.Controls.RemoveAt(0);
+            Form fh = formhija as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panel_Contenedor.Controls.Add(fh);
+            this.panel_Contenedor.Tag - fh;
+            fh.Show();
+        }
+
+        private void pictureInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new InicioForm());
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            pictureInicio_Click(null, e);
+        }
     }
 }

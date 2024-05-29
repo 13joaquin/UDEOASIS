@@ -16,5 +16,11 @@ namespace UDEOASIS
         {
             InitializeComponent();
         }
+
+        private void timerHoraFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("HH:mm:ss");
+            lblHora.Text = DateTime.Now.ToString("dddd MMMM yyyy");
+        }
     }
 }
