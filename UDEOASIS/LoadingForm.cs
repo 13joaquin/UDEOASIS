@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UDEOASIS
 {
-    public partial class BarraForm1 : Form
+    public partial class LoadingForm : Form
     {
-        public BarraForm1()
+        public LoadingForm()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace UDEOASIS
         private void timerBARRA_Tick(object sender, EventArgs e)
         {
             panelbARRA.Width += 3;
-            if (panelbARRA.Width >= 600)
+            if (panelbARRA.Width >= 525)
             {
                 timerBARRA.Stop();
                 MainForm main = new MainForm();

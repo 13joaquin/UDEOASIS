@@ -322,7 +322,6 @@
             label6.Size = new Size(113, 32);
             label6.TabIndex = 33;
             label6.Text = "Catedráticos";
-            
             // 
             // label7
             // 
@@ -363,7 +362,7 @@
             pictureBox11.Location = new Point(750, 199);
             pictureBox11.Margin = new Padding(3, 2, 3, 2);
             pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(212, 260);
+            pictureBox11.Size = new Size(187, 260);
             pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox11.TabIndex = 37;
             pictureBox11.TabStop = false;
@@ -395,7 +394,7 @@
             pictureBox12.Location = new Point(835, 529);
             pictureBox12.Margin = new Padding(3, 2, 3, 2);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(127, 49);
+            pictureBox12.Size = new Size(102, 37);
             pictureBox12.TabIndex = 40;
             pictureBox12.TabStop = false;
             // 
@@ -405,7 +404,7 @@
             pictureBox13.Location = new Point(879, 123);
             pictureBox13.Margin = new Padding(3, 2, 3, 2);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(61, 128);
+            pictureBox13.Size = new Size(58, 128);
             pictureBox13.TabIndex = 41;
             pictureBox13.TabStop = false;
             // 

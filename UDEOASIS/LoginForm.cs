@@ -47,7 +47,7 @@ namespace UDEOASIS
                 {
                     MessageBox.Show("Successful");
                     this.Hide();
-                    BarraForm1 mf = new BarraForm1();
+                    LoadingForm mf = new LoadingForm();
                     mf.Show();
                 }
                 else

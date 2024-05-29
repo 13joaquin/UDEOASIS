@@ -113,6 +113,16 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Loading_Students {
+            get {
+                object obj = ResourceManager.GetObject("Loading Students", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Horizontal {
             get {
                 object obj = ResourceManager.GetObject("Logo Horizontal", resourceCulture);
@@ -156,6 +166,16 @@ namespace UDEOASIS.Properties {
         internal static System.Drawing.Bitmap minimizar_icon {
             get {
                 object obj = ResourceManager.GetObject("minimizar icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mosaic {
+            get {
+                object obj = ResourceManager.GetObject("Mosaic", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

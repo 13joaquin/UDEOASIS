@@ -121,6 +121,9 @@
   <data name="Students" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\Students.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Mosaic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imgs\Loading\Mosaic.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="medio-circulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\medio-circulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,14 +133,14 @@
   <data name="Boy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\Boy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pass icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\Login\pass icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="minimizar icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\Login\minimizar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cuadro desva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imgs\Login\cuadro desva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pass icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Login\pass icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo Vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imgs\Login\Logo Vertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rombo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\rombo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +151,8 @@
   <data name="triangulo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\triangulo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo Vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imgs\Login\Logo Vertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\Login\cerrar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Comment desva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\Comment desva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,13 +160,16 @@
   <data name="Logo Horizontal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\Logo Horizontal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cuadro desva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imgs\Login\cuadro desva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="circulo-negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\circulo-negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="medio-circulo desva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imgs\Login\medio-circulo desva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\Login\cerrar icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Loading Students" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imgs\Loading\Loading Students.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
