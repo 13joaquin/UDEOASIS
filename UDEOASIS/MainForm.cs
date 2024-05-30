@@ -77,9 +77,9 @@ namespace UDEOASIS
             Form fh = formhija as Form;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
-           /* this.panel_Contenedor.Controls.Add(fh);
-            this.panel_Contenedor.Tag - fh;
-            fh.Show();*/
+            this.panel_Contenedor.Controls.Add(fh);
+            /*this.panel_Contenedor.Tag - fh;
+             fh.Show();*/
         }
 
         private void pictureInicio_Click(object sender, EventArgs e)

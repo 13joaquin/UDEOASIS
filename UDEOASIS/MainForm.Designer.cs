@@ -89,7 +89,7 @@
             panel_BarraTitulo.Dock = DockStyle.Top;
             panel_BarraTitulo.Location = new Point(0, 0);
             panel_BarraTitulo.Name = "panel_BarraTitulo";
-            panel_BarraTitulo.Size = new Size(1300, 40);
+            panel_BarraTitulo.Size = new Size(1082, 40);
             panel_BarraTitulo.TabIndex = 0;
             panel_BarraTitulo.MouseDown += panel_BarraTitulo_MouseDown;
             // 
@@ -98,7 +98,7 @@
             pbtnRestaurar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbtnRestaurar.Cursor = Cursors.Hand;
             pbtnRestaurar.Image = (Image)resources.GetObject("pbtnRestaurar.Image");
-            pbtnRestaurar.Location = new Point(1159, 4);
+            pbtnRestaurar.Location = new Point(941, 4);
             pbtnRestaurar.Name = "pbtnRestaurar";
             pbtnRestaurar.Size = new Size(30, 30);
             pbtnRestaurar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -112,7 +112,7 @@
             pbtnMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbtnMinimizar.Cursor = Cursors.Hand;
             pbtnMinimizar.Image = Properties.Resources.minimizar_icon;
-            pbtnMinimizar.Location = new Point(1195, 3);
+            pbtnMinimizar.Location = new Point(977, 3);
             pbtnMinimizar.Name = "pbtnMinimizar";
             pbtnMinimizar.Size = new Size(30, 30);
             pbtnMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -125,7 +125,7 @@
             pbtnMaximizar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbtnMaximizar.Cursor = Cursors.Hand;
             pbtnMaximizar.Image = (Image)resources.GetObject("pbtnMaximizar.Image");
-            pbtnMaximizar.Location = new Point(1231, 4);
+            pbtnMaximizar.Location = new Point(1013, 4);
             pbtnMaximizar.Name = "pbtnMaximizar";
             pbtnMaximizar.Size = new Size(30, 30);
             pbtnMaximizar.SizeMode = PictureBoxSizeMode.Zoom;
@@ -158,7 +158,7 @@
             panel_MenuVertical.Dock = DockStyle.Left;
             panel_MenuVertical.Location = new Point(0, 40);
             panel_MenuVertical.Name = "panel_MenuVertical";
-            panel_MenuVertical.Size = new Size(220, 610);
+            panel_MenuVertical.Size = new Size(220, 622);
             panel_MenuVertical.TabIndex = 1;
             // 
             // panel4
@@ -174,7 +174,7 @@
             panel4.Dock = DockStyle.Left;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(220, 610);
+            panel4.Size = new Size(220, 622);
             panel4.TabIndex = 6;
             // 
             // panel7
@@ -193,7 +193,7 @@
             panel7.Dock = DockStyle.Left;
             panel7.Location = new Point(0, 0);
             panel7.Name = "panel7";
-            panel7.Size = new Size(220, 610);
+            panel7.Size = new Size(220, 622);
             panel7.TabIndex = 6;
             // 
             // pictureBox4
@@ -455,14 +455,14 @@
             panel_Contenedor.Dock = DockStyle.Fill;
             panel_Contenedor.Location = new Point(220, 40);
             panel_Contenedor.Name = "panel_Contenedor";
-            panel_Contenedor.Size = new Size(1080, 610);
+            panel_Contenedor.Size = new Size(862, 622);
             panel_Contenedor.TabIndex = 2;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 650);
+            ClientSize = new Size(1082, 662);
             Controls.Add(panel_Contenedor);
             Controls.Add(panel_MenuVertical);
             Controls.Add(panel_BarraTitulo);
