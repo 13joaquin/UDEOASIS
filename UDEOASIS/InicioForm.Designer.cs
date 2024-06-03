@@ -40,7 +40,7 @@
             // 
             lblFecha.AutoSize = true;
             lblFecha.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFecha.Location = new Point(93, 241);
+            lblFecha.Location = new Point(169, 178);
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(109, 46);
             lblFecha.TabIndex = 1;
@@ -49,10 +49,10 @@
             // lblHora
             // 
             lblHora.AutoSize = true;
-            lblHora.Font = new Font("Segoe UI", 40F, FontStyle.Regular, GraphicsUnit.Point);
-            lblHora.Location = new Point(114, 152);
+            lblHora.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHora.Location = new Point(235, 108);
             lblHora.Name = "lblHora";
-            lblHora.Size = new Size(214, 89);
+            lblHora.Size = new Size(160, 67);
             lblHora.TabIndex = 2;
             lblHora.Text = "label1";
             // 
@@ -64,7 +64,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Logo_Vertical;
-            pictureBox1.Location = new Point(437, 48);
+            pictureBox1.Location = new Point(673, 108);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(324, 345);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -75,7 +75,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1080, 615);
             Controls.Add(pictureBox1);
             Controls.Add(lblHora);
             Controls.Add(lblFecha);

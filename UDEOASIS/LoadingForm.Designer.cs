@@ -57,18 +57,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Gill Sans MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(33, 67);
+            label1.Font = new Font("Gill Sans MT", 12.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(38, 89);
             label1.Name = "label1";
-            label1.Size = new Size(439, 27);
+            label1.Size = new Size(498, 30);
             label1.TabIndex = 3;
             label1.Text = "¡Bienvenido al Sistema de Asistencia Estudiantil! ";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // panel1
             // 
-            panel1.Location = new Point(-3, 163);
-            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Location = new Point(-3, 217);
             panel1.Name = "panel1";
             panel1.Size = new Size(0, 0);
             panel1.TabIndex = 4;
@@ -76,27 +75,24 @@
             // panelP
             // 
             panelP.BackColor = Color.FromArgb(100, 210, 145);
-            panelP.Location = new Point(1, 245);
-            panelP.Margin = new Padding(3, 2, 3, 2);
+            panelP.Location = new Point(1, 327);
             panelP.Name = "panelP";
             panelP.Size = new Size(0, 0);
             panelP.TabIndex = 5;
             // 
             // panel3
             // 
-            panel3.Location = new Point(1, 245);
-            panel3.Margin = new Padding(3, 2, 3, 2);
+            panel3.Location = new Point(1, 327);
             panel3.Name = "panel3";
-            panel3.Size = new Size(526, 13);
+            panel3.Size = new Size(601, 17);
             panel3.TabIndex = 6;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Logo_Vertical;
-            pictureBox1.Location = new Point(229, 4);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(262, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(45, 59);
+            pictureBox1.Size = new Size(51, 79);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -106,19 +102,18 @@
             label3.AutoSize = true;
             label3.Font = new Font("Gill Sans MT", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.DimGray;
-            label3.Location = new Point(142, 218);
+            label3.Location = new Point(162, 291);
             label3.Name = "label3";
-            label3.Size = new Size(244, 27);
+            label3.Size = new Size(317, 34);
             label3.TabIndex = 9;
             label3.Text = "Creando Inicio de Sesión...";
             // 
             // panelbARRA
             // 
             panelbARRA.BackColor = Color.FromArgb(162, 24, 46);
-            panelbARRA.Location = new Point(0, 246);
-            panelbARRA.Margin = new Padding(3, 2, 3, 2);
+            panelbARRA.Location = new Point(0, 328);
             panelbARRA.Name = "panelbARRA";
-            panelbARRA.Size = new Size(79, 13);
+            panelbARRA.Size = new Size(90, 17);
             panelbARRA.TabIndex = 7;
             // 
             // timerBARRA
@@ -130,10 +125,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Loading_Students;
-            pictureBox2.Location = new Point(95, 101);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Location = new Point(109, 135);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(336, 115);
+            pictureBox2.Size = new Size(384, 153);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
@@ -141,10 +135,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = Properties.Resources.triangulo2;
-            pictureBox4.Location = new Point(-26, -14);
-            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Location = new Point(-30, -19);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(53, 77);
+            pictureBox4.Size = new Size(61, 103);
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 23;
             pictureBox4.TabStop = false;
@@ -152,10 +145,9 @@
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.cuadro_desva;
-            pictureBox7.Location = new Point(-26, 83);
-            pictureBox7.Margin = new Padding(3, 2, 3, 2);
+            pictureBox7.Location = new Point(-30, 111);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(54, 53);
+            pictureBox7.Size = new Size(62, 71);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 26;
             pictureBox7.TabStop = false;
@@ -163,51 +155,47 @@
             // pictureBox13
             // 
             pictureBox13.Image = Properties.Resources.rombo;
-            pictureBox13.Location = new Point(489, 140);
-            pictureBox13.Margin = new Padding(3, 2, 3, 2);
+            pictureBox13.Location = new Point(559, 187);
             pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(38, 101);
+            pictureBox13.Size = new Size(43, 135);
             pictureBox13.TabIndex = 42;
             pictureBox13.TabStop = false;
             // 
             // pictureBox8
             // 
             pictureBox8.Image = Properties.Resources.Comment_desva;
-            pictureBox8.Location = new Point(509, 140);
-            pictureBox8.Margin = new Padding(3, 2, 3, 2);
+            pictureBox8.Location = new Point(581, 184);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(18, 30);
+            pictureBox8.Size = new Size(21, 40);
             pictureBox8.TabIndex = 43;
             pictureBox8.TabStop = false;
             // 
             // pictureBox12
             // 
             pictureBox12.Image = Properties.Resources.circulo_negro;
-            pictureBox12.Location = new Point(469, 4);
-            pictureBox12.Margin = new Padding(3, 2, 3, 2);
+            pictureBox12.Location = new Point(536, 5);
             pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(58, 130);
+            pictureBox12.Size = new Size(66, 173);
             pictureBox12.TabIndex = 44;
             pictureBox12.TabStop = false;
             // 
             // pictureBox5
             // 
             pictureBox5.Image = Properties.Resources.medio_circulo;
-            pictureBox5.Location = new Point(0, 159);
-            pictureBox5.Margin = new Padding(3, 2, 3, 2);
+            pictureBox5.Location = new Point(0, 212);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(18, 46);
+            pictureBox5.Size = new Size(21, 61);
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 45;
             pictureBox5.TabStop = false;
             // 
             // LoadingForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = Color.White;
-            ClientSize = new Size(525, 259);
+            ClientSize = new Size(604, 345);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox12);
             Controls.Add(pictureBox8);
@@ -223,7 +211,6 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "LoadingForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BarraForm1";

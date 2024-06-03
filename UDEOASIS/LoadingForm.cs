@@ -28,7 +28,7 @@ namespace UDEOASIS
             if (panelbARRA.Width >= 525)
             {
                 timerBARRA.Stop();
-                MainForm main = new MainForm();
+                MenuFrom main = new MenuFrom();
                 main.Show();
                 this.Hide();
             }
