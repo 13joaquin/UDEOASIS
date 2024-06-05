@@ -34,7 +34,7 @@
             lbl_ID = new Label();
             txt_ID = new TextBox();
             label3 = new Label();
-            dateTime = new DateTimePicker();
+            dateTime1 = new DateTimePicker();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -43,7 +43,7 @@
             label9 = new Label();
             radioBtnMasculino = new RadioButton();
             radioBtnFemenino = new RadioButton();
-            pictureBox2 = new PictureBox();
+            picBxQR = new PictureBox();
             button1 = new Button();
             btnGuardar = new Button();
             btnUpdate = new Button();
@@ -51,8 +51,10 @@
             txtNombre = new TextBox();
             txtTelefono = new TextBox();
             txtEmail = new TextBox();
+            txtApellido = new TextBox();
+            txtCurso = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picBxQR).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -110,13 +112,13 @@
             label3.TabIndex = 7;
             label3.Text = "Nombre:";
             // 
-            // dateTime
+            // dateTime1
             // 
-            dateTime.Format = DateTimePickerFormat.Short;
-            dateTime.Location = new Point(447, 335);
-            dateTime.Name = "dateTime";
-            dateTime.Size = new Size(144, 27);
-            dateTime.TabIndex = 8;
+            dateTime1.Format = DateTimePickerFormat.Short;
+            dateTime1.Location = new Point(447, 335);
+            dateTime1.Name = "dateTime1";
+            dateTime1.Size = new Size(144, 27);
+            dateTime1.TabIndex = 8;
             // 
             // label4
             // 
@@ -124,9 +126,9 @@
             label4.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(251, 225);
             label4.Name = "label4";
-            label4.Size = new Size(111, 25);
+            label4.Size = new Size(90, 25);
             label4.TabIndex = 9;
-            label4.Text = "FatherName:";
+            label4.Text = "Apellidos:";
             // 
             // label5
             // 
@@ -154,9 +156,9 @@
             label7.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             label7.Location = new Point(251, 385);
             label7.Name = "label7";
-            label7.Size = new Size(57, 25);
+            label7.Size = new Size(62, 25);
             label7.TabIndex = 12;
-            label7.Text = "Clase:";
+            label7.Text = "Curso:";
             // 
             // label8
             // 
@@ -188,6 +190,7 @@
             radioBtnMasculino.TabStop = true;
             radioBtnMasculino.Text = "Masculino";
             radioBtnMasculino.UseVisualStyleBackColor = true;
+            radioBtnMasculino.CheckedChanged += radioBtnMasculino_CheckedChanged;
             // 
             // radioBtnFemenino
             // 
@@ -199,14 +202,15 @@
             radioBtnFemenino.TabStop = true;
             radioBtnFemenino.Text = "Femenino";
             radioBtnFemenino.UseVisualStyleBackColor = true;
+            radioBtnFemenino.CheckedChanged += radioBtnFemenino_CheckedChanged;
             // 
-            // pictureBox2
+            // picBxQR
             // 
-            pictureBox2.Location = new Point(636, 125);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(405, 266);
-            pictureBox2.TabIndex = 17;
-            pictureBox2.TabStop = false;
+            picBxQR.Location = new Point(636, 125);
+            picBxQR.Name = "picBxQR";
+            picBxQR.Size = new Size(405, 266);
+            picBxQR.TabIndex = 17;
+            picBxQR.TabStop = false;
             // 
             // button1
             // 
@@ -266,11 +270,27 @@
             txtEmail.Size = new Size(162, 27);
             txtEmail.TabIndex = 24;
             // 
+            // txtApellido
+            // 
+            txtApellido.Location = new Point(347, 223);
+            txtApellido.Name = "txtApellido";
+            txtApellido.Size = new Size(162, 27);
+            txtApellido.TabIndex = 25;
+            // 
+            // txtCurso
+            // 
+            txtCurso.Location = new Point(339, 383);
+            txtCurso.Name = "txtCurso";
+            txtCurso.Size = new Size(162, 27);
+            txtCurso.TabIndex = 26;
+            // 
             // RegistroFrom
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1062, 568);
+            Controls.Add(txtCurso);
+            Controls.Add(txtApellido);
             Controls.Add(txtEmail);
             Controls.Add(txtTelefono);
             Controls.Add(txtNombre);
@@ -278,7 +298,7 @@
             Controls.Add(btnUpdate);
             Controls.Add(btnGuardar);
             Controls.Add(button1);
-            Controls.Add(pictureBox2);
+            Controls.Add(picBxQR);
             Controls.Add(radioBtnFemenino);
             Controls.Add(radioBtnMasculino);
             Controls.Add(label9);
@@ -287,7 +307,7 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(dateTime);
+            Controls.Add(dateTime1);
             Controls.Add(label3);
             Controls.Add(txt_ID);
             Controls.Add(lbl_ID);
@@ -299,7 +319,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picBxQR).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -311,7 +331,7 @@
         private Label lbl_ID;
         private TextBox txt_ID;
         private Label label3;
-        private DateTimePicker dateTime;
+        private DateTimePicker dateTime1;
         private Label label4;
         private Label label5;
         private Label label6;
@@ -320,7 +340,7 @@
         private Label label9;
         private RadioButton radioBtnMasculino;
         private RadioButton radioBtnFemenino;
-        private PictureBox pictureBox2;
+        private PictureBox picBxQR;
         private Button button1;
         private Button btnGuardar;
         private Button btnUpdate;
@@ -328,5 +348,7 @@
         private TextBox txtNombre;
         private TextBox txtTelefono;
         private TextBox txtEmail;
+        private TextBox txtApellido;
+        private TextBox txtCurso;
     }
 }
