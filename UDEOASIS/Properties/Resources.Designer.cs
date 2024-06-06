@@ -73,9 +73,39 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap c_academico_icon {
+            get {
+                object obj = ResourceManager.GetObject("c academico icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap catedratico_icon {
+            get {
+                object obj = ResourceManager.GetObject("catedratico icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar_icon1 {
             get {
                 object obj = ResourceManager.GetObject("cerrar icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar_sesion_icon {
+            get {
+                object obj = ResourceManager.GetObject("cerrar-sesion icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +143,46 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cursos_icon {
+            get {
+                object obj = ResourceManager.GetObject("cursos icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dashboard_icon {
+            get {
+                object obj = ResourceManager.GetObject("Dashboard icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estudiante_icon {
+            get {
+                object obj = ResourceManager.GetObject("estudiante icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Inicio {
+            get {
+                object obj = ResourceManager.GetObject("Inicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Loading_Students {
             get {
                 object obj = ResourceManager.GetObject("Loading Students", resourceCulture);
@@ -136,6 +206,16 @@ namespace UDEOASIS.Properties {
         internal static System.Drawing.Bitmap Logo_Vertical {
             get {
                 object obj = ResourceManager.GetObject("Logo Vertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap maximizar_icon {
+            get {
+                object obj = ResourceManager.GetObject("maximizar icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +253,9 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Mosaic {
+        internal static System.Drawing.Bitmap pass_icon {
             get {
-                object obj = ResourceManager.GetObject("Mosaic", resourceCulture);
+                object obj = ResourceManager.GetObject("pass icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +263,9 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pass_icon {
+        internal static System.Drawing.Bitmap restablecer_icon {
             get {
-                object obj = ResourceManager.GetObject("pass icon", resourceCulture);
+                object obj = ResourceManager.GetObject("restablecer icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
