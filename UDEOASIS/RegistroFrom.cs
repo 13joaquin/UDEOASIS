@@ -45,7 +45,7 @@ namespace UDEOASIS
             {
                 //Para Image
                 MemoryStream ms = new MemoryStream();
-                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                picUP.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] Photo = new byte[ms.Length];
                 ms.Read(Photo, 0, Photo.Length);
 
@@ -53,7 +53,7 @@ namespace UDEOASIS
                 connection.Open();
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO registration_tb (ID,Nombre,Apellido,EmailAddress,FechaDeCumpleaños,Curso,Telefono,Genero,Foto) values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + dateTime1.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + Genero + "',@photo)";
+                command.CommandText = "INSERT INTO registro_tb (ID,Nombre,Apellido,EmailAddress,FechaCumpleaños,Curso,Telefono,Genero,Photo) values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + dateTime1.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + Genero + "',@photo)";
                 command.Parameters.AddWithValue("@photo", Photo);
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -64,7 +64,7 @@ namespace UDEOASIS
                 MessageBox.Show("Error" + ex);
             }
             //Para Guardar Folder del Generador de QRCODE imagen
-            string inititialDIR = @"\QRfile";
+            string inititialDIR = @"C:\Users\juaqu\Proyecto Feria\ProyectoSEMI\UDEOASIS\UDEOASIS\Imgs\QRfile";
             var dialog = new SaveFileDialog();
             dialog.InitialDirectory = inititialDIR;
             dialog.Filter = "PNG|*.png|JPEG|*.jpeg|BMP|*.bmp|GIF|*.gif";
@@ -82,6 +82,16 @@ namespace UDEOASIS
         private void radioBtnFemenino_CheckedChanged(object sender, EventArgs e)
         {
             Genero = "Femenino";
+        }
+
+        private void btnBuscarPerfil_Click(object sender, EventArgs e)
+        {
+            //Para Upload image
+            OpenFileDialog fg = new OpenFileDialog();
+            if (fg.ShowDialog() == DialogResult.OK)
+            {
+                picUP.Image = Image.FromFile(fg.FileName);
+            }
         }
 
         /* private void button1_Click(object sender, EventArgs e)

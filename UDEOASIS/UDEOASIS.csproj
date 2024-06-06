@@ -12,6 +12,7 @@
   <ItemGroup>
     <Folder Include="Icons\Login\" />
     <Folder Include="Imgs\Login\" />
+    <Folder Include="Imgs\QRfile\" />
   </ItemGroup>
 
   <ItemGroup>
