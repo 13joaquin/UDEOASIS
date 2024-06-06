@@ -16,6 +16,21 @@ namespace UDEOASIS
         public MenuFrom()
         {
             InitializeComponent();
+            Titulos();
+        }
+        public void Titulos()
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.AutoPopDelay = 5000;
+            toolTip.InitialDelay = 300;
+            toolTip.ReshowDelay = 500;
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(this.btnMinimizar, "Minimizar");
+            toolTip.SetToolTip(this.btnMaximizar, "Maximizar");
+            toolTip.SetToolTip(this.btnCerrar, "Cerrar");
+            toolTip.SetToolTip(this.btnRestablecer, "Restablecer");
+            toolTip.SetToolTip(this.btnSalir, "Cerrar Sesión");
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

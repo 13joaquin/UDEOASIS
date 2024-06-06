@@ -177,6 +177,7 @@
             // 
             // btnSalir
             // 
+            btnSalir.Cursor = Cursors.Hand;
             btnSalir.Image = Properties.Resources.cerrar_sesion_icon;
             btnSalir.Location = new Point(64, 376);
             btnSalir.Margin = new Padding(3, 2, 3, 2);

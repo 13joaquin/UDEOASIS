@@ -19,9 +19,20 @@ namespace UDEOASIS
         {
             InitializeComponent();
             on.ConnectionString = @"server=localhost;database=udeo_info;userid=root;password=;";
+            Titulos();
 
         }
+        public void Titulos()
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.AutoPopDelay = 5000;
+            toolTip.InitialDelay = 300;
+            toolTip.ReshowDelay = 500;
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(this.BtnMin, "Minimizar");
+            toolTip.SetToolTip(this.BtnExit, "Cerrar");
 
+        }
         private void LoginForm_Load(object sender, EventArgs e)
         {
             on.Open();

@@ -12,6 +12,7 @@ namespace UDEOASIS
         {
             InitializeComponent();
             connection.ConnectionString = @"server=localhost;database=udeo_info;userid=root;password=;";
+            Titulos();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -20,6 +21,19 @@ namespace UDEOASIS
 
         }
         string Genero;
+        public void Titulos()
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.AutoPopDelay = 5000;
+            toolTip.InitialDelay = 300;
+            toolTip.ReshowDelay = 500;
+            toolTip.ShowAlways = true;
+            toolTip.SetToolTip(this.btnGuardar, "Guardar");
+            toolTip.SetToolTip(this.btnUpdate, "Update");
+            toolTip.SetToolTip(this.btnEliminar, "Eliminar");
+            toolTip.SetToolTip(this.btnBuscarPerfil, "Buscar fotografía de estudiante");
+
+        }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             //Para QRCoder Generator
