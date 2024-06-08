@@ -28,41 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
+            components = new System.ComponentModel.Container();
+            comboBox_FIL = new ComboBox();
             label1 = new Label();
             pictureBx_Camara = new PictureBox();
             btn_OpenCamera = new Button();
             btn_ScanQR = new Button();
             groupBx_PelEstudiante = new GroupBox();
-            pictureBox1 = new PictureBox();
+            txt_Genero = new TextBox();
+            txt_Fecha = new TextBox();
             txtCurso = new TextBox();
             txtApellido = new TextBox();
             txtEmail = new TextBox();
             txtTelefono = new TextBox();
             txtNombre = new TextBox();
-            label9 = new Label();
-            label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
+            lbl_Genero = new Label();
+            lbl_Telefono = new Label();
+            lbl_Curso = new Label();
+            lbl_Fecha = new Label();
+            lbl_Email = new Label();
+            lbl_Apellidos = new Label();
+            lbl_Nombre = new Label();
             txt_ID = new TextBox();
             lbl_ID = new Label();
-            txt_Fecha = new TextBox();
-            txt_Genero = new TextBox();
+            pictureBox1 = new PictureBox();
+            lbl_Date = new Label();
+            lbl_Time = new Label();
+            timerFrom = new System.Windows.Forms.Timer(components);
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBx_Camara).BeginInit();
             groupBx_PelEstudiante.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // comboBox_FIL
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(49, 117);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 0;
+            comboBox_FIL.FormattingEnabled = true;
+            comboBox_FIL.Location = new Point(49, 117);
+            comboBox_FIL.Name = "comboBox_FIL";
+            comboBox_FIL.Size = new Size(151, 28);
+            comboBox_FIL.TabIndex = 0;
             // 
             // label1
             // 
@@ -94,6 +99,7 @@
             btn_OpenCamera.TabIndex = 3;
             btn_OpenCamera.Text = "OpenCamera";
             btn_OpenCamera.UseVisualStyleBackColor = true;
+            btn_OpenCamera.Click += btn_OpenCamera_Click;
             // 
             // btn_ScanQR
             // 
@@ -113,13 +119,13 @@
             groupBx_PelEstudiante.Controls.Add(txtEmail);
             groupBx_PelEstudiante.Controls.Add(txtTelefono);
             groupBx_PelEstudiante.Controls.Add(txtNombre);
-            groupBx_PelEstudiante.Controls.Add(label9);
-            groupBx_PelEstudiante.Controls.Add(label8);
-            groupBx_PelEstudiante.Controls.Add(label7);
-            groupBx_PelEstudiante.Controls.Add(label6);
-            groupBx_PelEstudiante.Controls.Add(label5);
-            groupBx_PelEstudiante.Controls.Add(label4);
-            groupBx_PelEstudiante.Controls.Add(label3);
+            groupBx_PelEstudiante.Controls.Add(lbl_Genero);
+            groupBx_PelEstudiante.Controls.Add(lbl_Telefono);
+            groupBx_PelEstudiante.Controls.Add(lbl_Curso);
+            groupBx_PelEstudiante.Controls.Add(lbl_Fecha);
+            groupBx_PelEstudiante.Controls.Add(lbl_Email);
+            groupBx_PelEstudiante.Controls.Add(lbl_Apellidos);
+            groupBx_PelEstudiante.Controls.Add(lbl_Nombre);
             groupBx_PelEstudiante.Controls.Add(txt_ID);
             groupBx_PelEstudiante.Controls.Add(lbl_ID);
             groupBx_PelEstudiante.Controls.Add(pictureBox1);
@@ -131,15 +137,21 @@
             groupBx_PelEstudiante.TabStop = false;
             groupBx_PelEstudiante.Text = "Perfil de Estudiantes";
             // 
-            // pictureBox1
+            // txt_Genero
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(26, 40);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(151, 188);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            txt_Genero.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Genero.Location = new Point(424, 389);
+            txt_Genero.Name = "txt_Genero";
+            txt_Genero.Size = new Size(162, 39);
+            txt_Genero.TabIndex = 45;
+            // 
+            // txt_Fecha
+            // 
+            txt_Fecha.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Fecha.Location = new Point(424, 225);
+            txt_Fecha.Name = "txt_Fecha";
+            txt_Fecha.Size = new Size(162, 39);
+            txt_Fecha.TabIndex = 44;
             // 
             // txtCurso
             // 
@@ -181,82 +193,82 @@
             txtNombre.Size = new Size(162, 39);
             txtNombre.TabIndex = 39;
             // 
-            // label9
+            // lbl_Genero
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(260, 396);
-            label9.Name = "label9";
-            label9.Size = new Size(82, 32);
-            label9.TabIndex = 36;
-            label9.Text = "Genero:";
-            label9.TextAlign = ContentAlignment.MiddleRight;
+            lbl_Genero.AutoSize = true;
+            lbl_Genero.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Genero.Location = new Point(260, 396);
+            lbl_Genero.Name = "lbl_Genero";
+            lbl_Genero.Size = new Size(82, 32);
+            lbl_Genero.TabIndex = 36;
+            lbl_Genero.Text = "Genero:";
+            lbl_Genero.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label8
+            // lbl_Telefono
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(260, 332);
-            label8.Name = "label8";
-            label8.Size = new Size(97, 32);
-            label8.TabIndex = 35;
-            label8.Text = "Telefono:";
-            label8.TextAlign = ContentAlignment.MiddleRight;
+            lbl_Telefono.AutoSize = true;
+            lbl_Telefono.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Telefono.Location = new Point(260, 332);
+            lbl_Telefono.Name = "lbl_Telefono";
+            lbl_Telefono.Size = new Size(97, 32);
+            lbl_Telefono.TabIndex = 35;
+            lbl_Telefono.Text = "Telefono:";
+            lbl_Telefono.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label7
+            // lbl_Curso
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(260, 281);
-            label7.Name = "label7";
-            label7.Size = new Size(70, 32);
-            label7.TabIndex = 34;
-            label7.Text = "Curso:";
-            label7.TextAlign = ContentAlignment.MiddleRight;
+            lbl_Curso.AutoSize = true;
+            lbl_Curso.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Curso.Location = new Point(260, 281);
+            lbl_Curso.Name = "lbl_Curso";
+            lbl_Curso.Size = new Size(70, 32);
+            lbl_Curso.TabIndex = 34;
+            lbl_Curso.Text = "Curso:";
+            lbl_Curso.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label6
+            // lbl_Fecha
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(193, 225);
-            label6.Name = "label6";
-            label6.Size = new Size(208, 32);
-            label6.TabIndex = 33;
-            label6.Text = "Fecha de Cumpleaños:";
-            label6.TextAlign = ContentAlignment.MiddleRight;
+            lbl_Fecha.AutoSize = true;
+            lbl_Fecha.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Fecha.Location = new Point(196, 228);
+            lbl_Fecha.Name = "lbl_Fecha";
+            lbl_Fecha.Size = new Size(208, 32);
+            lbl_Fecha.TabIndex = 33;
+            lbl_Fecha.Text = "Fecha de Cumpleaños:";
+            lbl_Fecha.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label5
+            // lbl_Email
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(228, 180);
-            label5.Name = "label5";
-            label5.Size = new Size(144, 32);
-            label5.TabIndex = 32;
-            label5.Text = "Email Address:";
-            label5.TextAlign = ContentAlignment.MiddleRight;
+            lbl_Email.AutoSize = true;
+            lbl_Email.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Email.Location = new Point(213, 176);
+            lbl_Email.Name = "lbl_Email";
+            lbl_Email.Size = new Size(144, 32);
+            lbl_Email.TabIndex = 32;
+            lbl_Email.Text = "Email Address:";
+            lbl_Email.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label4
+            // lbl_Apellidos
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(228, 127);
-            label4.Name = "label4";
-            label4.Size = new Size(102, 32);
-            label4.TabIndex = 31;
-            label4.Text = "Apellidos:";
-            label4.TextAlign = ContentAlignment.MiddleRight;
+            lbl_Apellidos.AutoSize = true;
+            lbl_Apellidos.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Apellidos.Location = new Point(228, 127);
+            lbl_Apellidos.Name = "lbl_Apellidos";
+            lbl_Apellidos.Size = new Size(102, 32);
+            lbl_Apellidos.TabIndex = 31;
+            lbl_Apellidos.Text = "Apellidos:";
+            lbl_Apellidos.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label3
+            // lbl_Nombre
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(228, 69);
-            label3.Name = "label3";
-            label3.Size = new Size(89, 32);
-            label3.TabIndex = 29;
-            label3.Text = "Nombre:";
-            label3.TextAlign = ContentAlignment.MiddleRight;
+            lbl_Nombre.AutoSize = true;
+            lbl_Nombre.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Nombre.Location = new Point(228, 69);
+            lbl_Nombre.Name = "lbl_Nombre";
+            lbl_Nombre.Size = new Size(89, 32);
+            lbl_Nombre.TabIndex = 29;
+            lbl_Nombre.Text = "Nombre:";
+            lbl_Nombre.TextAlign = ContentAlignment.MiddleRight;
             // 
             // txt_ID
             // 
@@ -277,36 +289,62 @@
             lbl_ID.Text = "ID:";
             lbl_ID.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // txt_Fecha
+            // pictureBox1
             // 
-            txt_Fecha.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_Fecha.Location = new Point(424, 225);
-            txt_Fecha.Name = "txt_Fecha";
-            txt_Fecha.Size = new Size(162, 39);
-            txt_Fecha.TabIndex = 44;
+            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox1.Location = new Point(31, 26);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(151, 188);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
-            // txt_Genero
+            // lbl_Date
             // 
-            txt_Genero.Font = new Font("Dubai", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_Genero.Location = new Point(424, 389);
-            txt_Genero.Name = "txt_Genero";
-            txt_Genero.Size = new Size(162, 39);
-            txt_Genero.TabIndex = 45;
+            lbl_Date.AutoSize = true;
+            lbl_Date.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Date.Location = new Point(321, 74);
+            lbl_Date.Name = "lbl_Date";
+            lbl_Date.Size = new Size(49, 25);
+            lbl_Date.TabIndex = 6;
+            lbl_Date.Text = "Date";
+            // 
+            // lbl_Time
+            // 
+            lbl_Time.AutoSize = true;
+            lbl_Time.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_Time.Location = new Point(401, 89);
+            lbl_Time.Name = "lbl_Time";
+            lbl_Time.Size = new Size(50, 25);
+            lbl_Time.TabIndex = 7;
+            lbl_Time.Text = "Time";
+            // 
+            // timerFrom
+            // 
+            timerFrom.Tick += timerFrom_Tick;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // ScanQRasistenciaForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1059, 616);
+            Controls.Add(lbl_Time);
+            Controls.Add(lbl_Date);
             Controls.Add(groupBx_PelEstudiante);
             Controls.Add(btn_ScanQR);
             Controls.Add(btn_OpenCamera);
             Controls.Add(pictureBx_Camara);
             Controls.Add(label1);
-            Controls.Add(comboBox1);
+            Controls.Add(comboBox_FIL);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ScanQRasistenciaForm";
             Text = "ScanQRasistenciaForm";
+            FormClosing += ScanQRasistenciaForm_FormClosing;
+            Load += ScanQRasistenciaForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBx_Camara).EndInit();
             groupBx_PelEstudiante.ResumeLayout(false);
             groupBx_PelEstudiante.PerformLayout();
@@ -317,7 +355,7 @@
 
         #endregion
 
-        private ComboBox comboBox1;
+        private ComboBox comboBox_FIL;
         private Label label1;
         private PictureBox pictureBx_Camara;
         private Button btn_OpenCamera;
@@ -331,14 +369,18 @@
         private TextBox txtEmail;
         private TextBox txtTelefono;
         private TextBox txtNombre;
-        private Label label9;
-        private Label label8;
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
+        private Label lbl_Genero;
+        private Label lbl_Telefono;
+        private Label lbl_Curso;
+        private Label lbl_Fecha;
+        private Label lbl_Email;
+        private Label lbl_Apellidos;
+        private Label lbl_Nombre;
         private TextBox txt_ID;
         private Label lbl_ID;
+        private Label lbl_Date;
+        private Label lbl_Time;
+        private System.Windows.Forms.Timer timerFrom;
+        private System.Windows.Forms.Timer timer1;
     }
 }
