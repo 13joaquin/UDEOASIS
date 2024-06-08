@@ -107,5 +107,15 @@ namespace UDEOASIS
         {
             AbrirFormularioHija(new ScanQRasistenciaForm());
         }
+
+        private void btn_ListaInfoEs_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHija(new ListInfoEstudianteForm());
+        }
+
+        private void btn_VerListaRegAsis_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHija(new ListaRegistroAsisForm());
+        }
     }
 }

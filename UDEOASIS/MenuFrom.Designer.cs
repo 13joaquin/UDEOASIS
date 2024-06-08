@@ -202,6 +202,7 @@
             btn_VerListaRegAsis.TabIndex = 7;
             btn_VerListaRegAsis.Text = "Ver Lista de Registro de Asistencia";
             btn_VerListaRegAsis.UseVisualStyleBackColor = false;
+            btn_VerListaRegAsis.Click += btn_VerListaRegAsis_Click;
             // 
             // panel2
             // 
@@ -224,6 +225,7 @@
             btn_ListaInfoEs.TabIndex = 5;
             btn_ListaInfoEs.Text = "Lista de Informacion del Estudiante";
             btn_ListaInfoEs.UseVisualStyleBackColor = false;
+            btn_ListaInfoEs.Click += btn_ListaInfoEs_Click;
             // 
             // panel1
             // 
