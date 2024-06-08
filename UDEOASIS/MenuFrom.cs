@@ -102,5 +102,10 @@ namespace UDEOASIS
             LoginForm lf = new LoginForm();
             lf.Show();
         }
+
+        private void btn_ScanQR_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHija(new ScanQRasistenciaForm());
+        }
     }
 }

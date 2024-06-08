@@ -256,7 +256,7 @@
             btnBuscarPerfil.Font = new Font("Dubai", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnBuscarPerfil.Image = Properties.Resources.buscar_stud_icon;
             btnBuscarPerfil.ImageAlign = ContentAlignment.MiddleRight;
-            btnBuscarPerfil.Location = new Point(29, 487);
+            btnBuscarPerfil.Location = new Point(29, 406);
             btnBuscarPerfil.Name = "btnBuscarPerfil";
             btnBuscarPerfil.Size = new Size(161, 56);
             btnBuscarPerfil.TabIndex = 18;
@@ -274,7 +274,7 @@
             btnGuardar.Font = new Font("Dubai", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
             btnGuardar.ForeColor = Color.White;
             btnGuardar.Image = Properties.Resources.guardar_icon1;
-            btnGuardar.Location = new Point(635, 481);
+            btnGuardar.Location = new Point(636, 481);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(130, 56);
             btnGuardar.TabIndex = 19;
@@ -447,7 +447,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1062, 568);
+            ClientSize = new Size(1059, 616);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox10);

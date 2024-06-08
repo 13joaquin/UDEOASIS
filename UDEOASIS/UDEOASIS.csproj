@@ -22,6 +22,7 @@
     <PackageReference Include="MySql.Data" Version="8.4.0" />
     <PackageReference Include="QRCoder" Version="1.5.1" />
     <PackageReference Include="QRCoder-ImageSharp" Version="0.10.0" />
+    <PackageReference Include="ZXing.Net" Version="0.16.9" />
   </ItemGroup>
 
   <ItemGroup>
