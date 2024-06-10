@@ -31,7 +31,7 @@ namespace UDEOASIS
             toolTip.SetToolTip(this.btnGuardar, "Guardar");
             toolTip.SetToolTip(this.btnUpdate, "Update");
             toolTip.SetToolTip(this.btnEliminar, "Eliminar");
-            toolTip.SetToolTip(this.btnBuscarPerfil, "Buscar fotografía de estudiante");
+            toolTip.SetToolTip(this.btnBuscarPerfil, "Buscar fotografía del estudiante");
 
         }
         private void btnGuardar_Click(object sender, EventArgs e)

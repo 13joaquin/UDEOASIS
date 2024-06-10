@@ -45,7 +45,7 @@ namespace UDEOASIS
 
         private void dataGridViewBD_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridViewBD.Rows[e.RowIndex];
                 txt_ID.Text = row.Cells["ID"].ToString();
@@ -62,6 +62,11 @@ namespace UDEOASIS
                 pictureBox1.Image = Image.FromStream(stream);
 
             }
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,6 +12,7 @@ using AForge.Video.DirectShow;
 using ZXing;
 using ZXing.Aztec;
 using MySql.Data.MySqlClient;
+using ZXing.QrCode;
 
 namespace UDEOASIS
 {
@@ -61,7 +62,7 @@ namespace UDEOASIS
 
         private void timerFrom_Tick(object sender, EventArgs e)
         {
-            BarcodeReader reader = new BarcodeReader();
+           /* BarcodeReader reader = new BarcodeReader();
             Result result = reader.Decode((Bitmap)pictureBox1.Image);
             try
             {
@@ -95,7 +96,7 @@ namespace UDEOASIS
             {
 
                 throw;
-            }
+            }*/
         }
 
         private void timer1_Tick(object sender, EventArgs e)

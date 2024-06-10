@@ -103,6 +103,16 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap camara_fotografica_icon {
+            get {
+                object obj = ResourceManager.GetObject("camara-fotografica icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap catedratico_icon {
             get {
                 object obj = ResourceManager.GetObject("catedratico icon", resourceCulture);
@@ -143,6 +153,26 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap codigo_qr_icon {
+            get {
+                object obj = ResourceManager.GetObject("codigo-qr icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap codigo_qr_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("codigo-qr icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Comment_desva {
             get {
                 object obj = ResourceManager.GetObject("Comment desva", resourceCulture);
@@ -176,6 +206,16 @@ namespace UDEOASIS.Properties {
         internal static System.Drawing.Bitmap Dashboard_icon {
             get {
                 object obj = ResourceManager.GetObject("Dashboard icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap descargar_pdf_icon {
+            get {
+                object obj = ResourceManager.GetObject("descargar-pdf icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
