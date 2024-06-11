@@ -105,7 +105,9 @@ namespace UDEOASIS
 
         private void btn_ScanQR_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHija(new ScanQRasistenciaForm());
+            this.Hide();
+            ScanQRasistenciaForm lf = new ScanQRasistenciaForm();
+            lf.ShowDialog();
         }
 
         private void btn_ListaInfoEs_Click(object sender, EventArgs e)

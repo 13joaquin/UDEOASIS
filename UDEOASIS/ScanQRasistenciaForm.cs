@@ -62,7 +62,8 @@ namespace UDEOASIS
 
         private void timerFrom_Tick(object sender, EventArgs e)
         {
-           /* BarcodeReader reader = new BarcodeReader();
+
+            BarcodeReader reader = new BarcodeReader();
             Result result = reader.Decode((Bitmap)pictureBox1.Image);
             try
             {
@@ -90,13 +91,14 @@ namespace UDEOASIS
                         pictureBox1.Image = Image.FromStream(ms);
                     }
                     cone.Close();
+                    timer1.Start();
                 }
             }
             catch (Exception ex)
             {
 
                 throw;
-            }*/
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -113,13 +115,22 @@ namespace UDEOASIS
                 cone.Open();
                 MySqlCommand mySqlCommand = new MySqlCommand();
                 mySqlCommand.Connection = cone;
-                mySqlCommand.CommandText = "INSERT INTO ()";
+                mySqlCommand.CommandText = "INSERT INTO attendace_tbl (ID,Name,FatherName,EmailAddress,DateOfBirth,Class,PhoneNumber,Gender,InTime,Photo) values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + txt_Fecha.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + txt_Genero.Text + "','" + lbl_Time.Text + "',@photo)";
+                mySqlCommand.Parameters.AddWithValue("@photo", Photo);
+                mySqlCommand.ExecuteNonQuery();
+                cone.Close();
+                MessageBox.Show("DataaSave Successful!");
             }
             catch (Exception ex)
             {
 
                 throw;
             }
+        }
+
+        private void btn_ScanQR_Click(object sender, EventArgs e)
+        {
+            timerFrom.Start();
         }
     }
 }
