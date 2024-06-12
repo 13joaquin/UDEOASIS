@@ -9,12 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using AForge;
-using AForge.Video;
 using AForge.Video.DirectShow;
 using ZXing;
 using ZXing.Aztec;
 using MySql.Data.MySqlClient;
-using ZXing.QrCode;
+using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.Structure;
+using AForge.Video;
+using ZXing.Windows.Compatibility;
 
 namespace UDEOASIS
 {
@@ -65,7 +68,7 @@ namespace UDEOASIS
 
         private void timerFrom_Tick(object sender, EventArgs e)
         {
-            BarcodeReader reader = new ZXing.BarcodeReader();
+            var reader = new BarcodeReader();
             Result result = reader.Decode((Bitmap)pictureBox1.Image);
             try
             {

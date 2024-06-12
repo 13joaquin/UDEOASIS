@@ -76,7 +76,7 @@
             label1.BackColor = Color.FromArgb(61, 42, 85);
             label1.Font = new Font("Gill Sans MT", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(344, 12);
+            label1.Location = new Point(324, 12);
             label1.Name = "label1";
             label1.Size = new Size(358, 42);
             label1.TabIndex = 1;
