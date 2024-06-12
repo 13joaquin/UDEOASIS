@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using AForge;
 using AForge.Video;
 using AForge.Video.DirectShow;
 using ZXing;
@@ -34,6 +36,7 @@ namespace UDEOASIS
             CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo item in CaptureDevice)
                 comboBox_FIL.Items.Add(item.Name);
+
             comboBox_FIL.SelectedIndex = 0;
             FinalFrame = new VideoCaptureDevice();
 
@@ -62,15 +65,14 @@ namespace UDEOASIS
 
         private void timerFrom_Tick(object sender, EventArgs e)
         {
-
-            BarcodeReader reader = new BarcodeReader();
+            BarcodeReader reader = new ZXing.BarcodeReader();
             Result result = reader.Decode((Bitmap)pictureBox1.Image);
             try
             {
                 string decode = result.ToString().Trim();
-                txt_ID.Text = decode;
                 if (decode != null)
                 {
+                    decode = txt_ID.Text;
                     cone.Open();
                     MySqlCommand command = new MySqlCommand();
                     command.Connection = cone;
