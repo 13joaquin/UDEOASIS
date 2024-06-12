@@ -48,25 +48,32 @@ namespace UDEOASIS
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridViewBD.Rows[e.RowIndex];
-                txt_ID.Text = row.Cells["ID"].ToString();
-                txtNombre.Text = row.Cells["Nombre"].ToString();
-                txtApellido.Text = row.Cells["Apellido"].ToString();
-                txtEmail.Text = row.Cells["EmailAddress"].ToString();
-                txt_Fecha.Text = row.Cells["FechaCumpleaños"].ToString();
-                txtCurso.Text = row.Cells["Curso"].ToString();
-                txtTelefono.Text = row.Cells["Telefono"].ToString();
-                txt_Genero.Text = row.Cells["Genero"].ToString();
+                txt_ID.Text = row.Cells["ID"].Value.ToString();
+                txtNombre.Text = row.Cells["Nombre"].Value.ToString();
+                txtApellido.Text = row.Cells["Apellido"].Value.ToString();
+                txtEmail.Text = row.Cells["EmailAddress"].Value.ToString();
+                txt_Fecha.Text = row.Cells["FechaCumpleaños"].Value.ToString();
+                txtCurso.Text = row.Cells["Curso"].Value.ToString();
+                txtTelefono.Text = row.Cells["Telefono"].Value.ToString();
+                txt_Genero.Text = row.Cells["Genero"].Value.ToString();
                 //display image
-                byte[] bytes = (byte[])dataGridViewBD.CurrentRow.Cells["Photo"].Value;
-                MemoryStream stream = new MemoryStream(bytes);
-                pictureBox1.Image = Image.FromStream(stream);
+                try
+                {
+                    byte[] bytes = (byte[])dataGridViewBD.CurrentRow.Cells["Photo"].Value;
+                    using (MemoryStream ms = new MemoryStream(bytes))
+                    {
+                        pictureIMG.Image = Image.FromStream(ms);
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                    pictureIMG.Image = null;
+                }
+                
 
             }
         }
 
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

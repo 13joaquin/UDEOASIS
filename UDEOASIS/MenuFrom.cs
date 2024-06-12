@@ -98,16 +98,12 @@ namespace UDEOASIS
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LoginForm lf = new LoginForm();
-            lf.Show();
+            AbrirFormularioHija(new LoginForm());
         }
 
         private void btn_ScanQR_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ScanQRasistenciaForm lf = new ScanQRasistenciaForm();
-            lf.ShowDialog();
+            AbrirFormularioHija( new ScanQRasistenciaForm());
         }
 
         private void btn_ListaInfoEs_Click(object sender, EventArgs e)
