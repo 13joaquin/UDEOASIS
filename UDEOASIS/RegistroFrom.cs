@@ -73,6 +73,16 @@ namespace UDEOASIS
             {
                 picBxQR.Image.Save(dialog.FileName);
             }
+            Limpiar();
+        }
+        private void Limpiar()
+        {
+            txt_ID.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtEmail.Clear();
+            txtTelefono.Clear();
+            txtCurso.Clear();
         }
 
         private void radioBtnMasculino_CheckedChanged(object sender, EventArgs e)

@@ -141,6 +141,7 @@ namespace UDEOASIS
                     cone.Close();
             }
         }
+        
         string ASIS;
         private void MarkAttendance(string qrCode)
         {
@@ -309,8 +310,19 @@ namespace UDEOASIS
 
         private void btn_UpdateAsis_Click(object sender, EventArgs e)
         {
-           
             MarkAttendance(qrCode);
+            Limpiar();
+        }
+        private void Limpiar()
+        {
+            txt_ID.Clear();
+            txtNombre.Clear();
+            txtApellido.Clear();
+            txtEmail.Clear();
+            txtCurso.Clear();
+            txtTelefono.Clear();
+            txt_Genero.Clear();
+
         }
     }
 }
