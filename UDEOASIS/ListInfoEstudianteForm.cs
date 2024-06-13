@@ -18,7 +18,7 @@ namespace UDEOASIS
         public ListInfoEstudianteForm()
         {
             InitializeComponent();
-            _connection.ConnectionString = @"server=localhost;database=udeo_info;userid=root;password=;";
+            _connection.ConnectionString = @"server=localhost;database= udeo_info;userid=root;password=;";
         }
 
         private void ListInfoEstudianteForm_Load(object sender, EventArgs e)

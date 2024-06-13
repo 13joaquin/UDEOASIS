@@ -11,7 +11,7 @@ namespace UDEOASIS
         public RegistroFrom()
         {
             InitializeComponent();
-            connection.ConnectionString = @"server=localhost;database=udeo_info;userid=root;password=;";
+            connection.ConnectionString = @"server=localhost;database= udeo_info;userid=root;password=;";
             Titulos();
         }
 
@@ -53,8 +53,9 @@ namespace UDEOASIS
                 connection.Open();
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO registro_tb (ID,Nombre,Apellido,EmailAddress,FechaCumpleaños,Curso,Telefono,Genero,Photo) values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + dateTime1.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + Genero + "',@photo)";
-                command.Parameters.AddWithValue("@photo", Photo);
+                command.CommandText = "INSERT INTO registro_tb (ID,Nombre,Apellido,EmailAddress,FechaCumpleaños,Curso,Telefono,Genero,Photo) " +
+                    "values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + dateTime1.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + Genero + "',@foto)";
+                command.Parameters.AddWithValue("@Photo", Photo);
                 command.ExecuteNonQuery();
                 connection.Close();
             }
@@ -93,12 +94,5 @@ namespace UDEOASIS
                 picUP.Image = Image.FromFile(fg.FileName);
             }
         }
-
-        /* private void button1_Click(object sender, EventArgs e)
-        {
-            LoginForm mff = new LoginForm();
-            this.Hide();
-            mff.Show();
-        }*/
     }
 }

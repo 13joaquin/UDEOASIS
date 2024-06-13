@@ -34,7 +34,7 @@ namespace UDEOASIS
         public ScanQRasistenciaForm()
         {
             InitializeComponent();
-            cone.ConnectionString = @"server=localhost;database=udeo_info;userid=root;password=;";
+            cone.ConnectionString = @"server=localhost;database= udeo_info;userid=root;password=;";
             lbl_Date.Text = DateTime.Now.ToLongDateString();
             lbl_Time.Text = DateTime.Now.ToLongTimeString();
         }
@@ -107,10 +107,11 @@ namespace UDEOASIS
         }
         private void FetchDataFromDatabase(string qrCode)
         {
+            //LIKE '%' " + txt_ID.Text + " %'
             try
             {
                 cone.Open();
-                string query = "SELECT * FROM registro_tb WHERE ID = @QRCode";
+                string query = "SELECT * FROM registro_tb WHERE ID = @QRCode ";
                 MySqlCommand command = new MySqlCommand(query, cone);
                 command.Parameters.AddWithValue("@QRCode", qrCode);
                 MySqlDataReader dr = command.ExecuteReader();
@@ -127,9 +128,9 @@ namespace UDEOASIS
 
                     byte[] img = (byte[])dr["Photo"];
                     MemoryStream ms = new MemoryStream(img);
-                    pictureBox1.Image = Image.FromStream(ms);
+                    pictureBx_Camara.Image = Image.FromStream(ms);
 
-                    MarkAttendance(qrCode);
+                    //MarkAttendance(qrCode);
                 }
                 cone.Close();
             }
@@ -140,24 +141,26 @@ namespace UDEOASIS
                     cone.Close();
             }
         }
-
+        string ASIS;
         private void MarkAttendance(string qrCode)
         {
             try
             {
                 cone.Open();
-                string query = "INSERT INTO attendance_tbl (ID, Name, FatherName, EmailAddress, DateOfBirth, Class, PhoneNumber, Gender, InTime, Photo) " +
-                               "VALUES (@ID, @Name, @FatherName, @Email, @DOB, @Class, @Phone, @Gender, @InTime, @Photo)";
+                string query = "INSERT INTO attendance_tb (ID, Nombre, Apellido, EmailAddress, FechaCumpleaños, Curso, Telefono, Genero, TiempoEntrada, Asistencia, Photo) " +
+                               "VALUES (@ID_carne, @Nombre, @Apellido, @EmailAddress, @FechaCumpleaños, @Curso, @Telefono, @Genero, @TiempoEntrada, @Asistencia, @Photo)";
                 MySqlCommand command = new MySqlCommand(query, cone);
                 command.Parameters.AddWithValue("@ID", txt_ID.Text);
-                command.Parameters.AddWithValue("@Name", txtNombre.Text);
-                command.Parameters.AddWithValue("@FatherName", txtApellido.Text);
-                command.Parameters.AddWithValue("@Email", txtEmail.Text);
-                command.Parameters.AddWithValue("@DOB", txt_Fecha.Text);
-                command.Parameters.AddWithValue("@Class", txtCurso.Text);
-                command.Parameters.AddWithValue("@Phone", txtTelefono.Text);
-                command.Parameters.AddWithValue("@Gender", txt_Genero.Text);
-                command.Parameters.AddWithValue("@InTime", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                command.Parameters.AddWithValue("@Nombre", txtNombre.Text);
+                command.Parameters.AddWithValue("@Apellido", txtApellido.Text);
+                command.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
+                command.Parameters.AddWithValue("@FechaCumpleaños", txt_Fecha.Text);
+                command.Parameters.AddWithValue("@Curso", txtCurso.Text);
+                command.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
+                command.Parameters.AddWithValue("@Genero", txt_Genero.Text);
+                command.Parameters.AddWithValue("@TiempoEntrada", lbl_Time.Text);
+                command.Parameters.AddWithValue("@Asistencia", ASIS);
+                //DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
 
                 MemoryStream ms = new MemoryStream();
                 pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
@@ -188,84 +191,126 @@ namespace UDEOASIS
 
         private void ScanQRasistenciaForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-                     //if (FinalFrame.IsRunning == true)
-                    //    FinalFrame.Stop();
-                if (_capture != null)
-                    _capture.Dispose();
+            //if (FinalFrame.IsRunning == true)
+            //    FinalFrame.Stop();
+            if (_capture != null)
+                _capture.Dispose();
         }
 
-        private void timerFrom_Tick(object sender, EventArgs e)
-        {
-            //var reader = new BarcodeReader();
-            //Result result = reader.Decode((Bitmap)pictureBox1.Image);
-            //try
-            //{
-            //    string decode = result.ToString().Trim();
-            //    if (decode != null)
-            //    {
-            //        decode = txt_ID.Text;
-            //        cone.Open();
-            //        MySqlCommand command = new MySqlCommand();
-            //        command.Connection = cone;
-            //        command.CommandText = "SELECT * FROM registro_tb WHERE ID LIKE '%' " + txt_ID.Text + " %' ";
-            //        MySqlDataReader dr = command.ExecuteReader();
-            //        dr.Read();
-            //        if (dr.HasRows)
-            //        {
-            //            txtNombre.Text = dr["Nombre"].ToString();
-            //            txtApellido.Text = dr["Apellido"].ToString();
-            //            txtEmail.Text = dr["EmailAddress"].ToString();
-            //            txt_Fecha.Text = dr["FechaCumpleaños"].ToString();
-            //            txtCurso.Text = dr["Curso"].ToString();
-            //            txtTelefono.Text = dr["Telefono"].ToString();
-            //            txt_Genero.Text = dr["Genero"].ToString();
-            //            byte[] img = ((byte[])dr["Photo"]);
-            //            MemoryStream ms = new MemoryStream(img);
-            //            pictureBox1.Image = Image.FromStream(ms);
-            //        }
-            //        cone.Close();
-            //        timer1.Start();
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
+        //Metodo
+        //private void timerFrom_Tick(object sender, EventArgs e)
+        //{
+        //var reader = new BarcodeReader();
+        //Result result = reader.Decode((Bitmap)pictureBox1.Image);
+        //try
+        //{
+        //    string decode = result.ToString().Trim();
+        //    if (decode != null)
+        //    {
+        //        decode = txt_ID.Text;
+        //        cone.Open();
+        //        MySqlCommand command = new MySqlCommand();
+        //        command.Connection = cone;
+        //        command.CommandText = "SELECT * FROM registro_tb WHERE ID LIKE '%' " + txt_ID.Text + " %' ";
+        //        MySqlDataReader dr = command.ExecuteReader();
+        //        dr.Read();
+        //        if (dr.HasRows)
+        //        {
+        //            txtNombre.Text = dr["Nombre"].ToString();
+        //            txtApellido.Text = dr["Apellido"].ToString();
+        //            txtEmail.Text = dr["EmailAddress"].ToString();
+        //            txt_Fecha.Text = dr["FechaCumpleaños"].ToString();
+        //            txtCurso.Text = dr["Curso"].ToString();
+        //            txtTelefono.Text = dr["Telefono"].ToString();
+        //            txt_Genero.Text = dr["Genero"].ToString();
+        //            byte[] img = ((byte[])dr["Photo"]);
+        //            MemoryStream ms = new MemoryStream(img);
+        //            pictureBox1.Image = Image.FromStream(ms);
+        //        }
+        //        cone.Close();
+        //        timer1.Start();
+        //    }
+        //}
+        //catch (Exception ex)
+        //{
 
-            //    throw;
-            //}
-        }
+        //    throw;
+        //}
+        //}
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            ////Para Atención
-            //try
-            //{
-            //    MemoryStream memoryStream = new MemoryStream();
-            //    pictureBox1.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Jpeg);
-            //    byte[] Photo = new byte[memoryStream.Length];
-            //    memoryStream.Position = 0;
-            //    memoryStream.Read(Photo, 0, Photo.Length);
+        //private void timer1_Tick(object sender, EventArgs e)
+        //{
+        ////Para Atención
+        //try
+        //{
+        //    MemoryStream memoryStream = new MemoryStream();
+        //    pictureBox1.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Jpeg);
+        //    byte[] Photo = new byte[memoryStream.Length];
+        //    memoryStream.Position = 0;
+        //    memoryStream.Read(Photo, 0, Photo.Length);
 
-            //    cone.Open();
-            //    MySqlCommand mySqlCommand = new MySqlCommand();
-            //    mySqlCommand.Connection = cone;
-            //    mySqlCommand.CommandText = "INSERT INTO attendace_tbl (ID,Name,FatherName,EmailAddress,DateOfBirth,Class,PhoneNumber,Gender,InTime,Photo) values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + txt_Fecha.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + txt_Genero.Text + "','" + lbl_Time.Text + "',@photo)";
-            //    mySqlCommand.Parameters.AddWithValue("@photo", Photo);
-            //    mySqlCommand.ExecuteNonQuery();
-            //    cone.Close();
-            //    MessageBox.Show("DataaSave Successful!");
-            //}
-            //catch (Exception ex)
-            //{
+        //    cone.Open();
+        //    MySqlCommand mySqlCommand = new MySqlCommand();
+        //    mySqlCommand.Connection = cone;
+        //    mySqlCommand.CommandText = "INSERT INTO attendace_tbl (ID,Name,FatherName,EmailAddress,DateOfBirth,Class,PhoneNumber,Gender,InTime,Photo) values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + txt_Fecha.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + txt_Genero.Text + "','" + lbl_Time.Text + "',@photo)";
+        //    mySqlCommand.Parameters.AddWithValue("@photo", Photo);
+        //    mySqlCommand.ExecuteNonQuery();
+        //    cone.Close();
+        //    MessageBox.Show("DataaSave Successful!");
+        //}
+        //catch (Exception ex)
+        //{
 
-            //    throw;
-            //}
-        }
+        //    throw;
+        //}
+        //}
 
         private void btn_ScanQR_Click(object sender, EventArgs e)
         {
             if (!_captureInProgress)
                 btn_OpenCamera_Click(sender, e);
             //timerFrom.Start();
+        }
+        private void abrir()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Image image = Image.FromFile(openFileDialog.FileName);
+                pictureBox1.Image = image;
+                DecodeIQR(image);
+            }
+        }
+        private void DecodeIQR(Image image)
+        {
+            BarcodeReader reader = new BarcodeReader();
+            Bitmap bitmap = new Bitmap(image);
+            Result result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                string decodedText = result.Text.Trim();
+                if (!string.IsNullOrEmpty(decodedText))
+                {
+                    FetchDataFromDatabase(decodedText);
+                }
+            }
+            else
+            {
+                MessageBox.Show("No QR code detected.");
+            }
+        }
+        string qrCode;
+
+        private void btn_AbrirIMGQR_Click(object sender, EventArgs e)
+        {
+            abrir();
+        }
+
+        private void btn_UpdateAsis_Click(object sender, EventArgs e)
+        {
+           
+            MarkAttendance(qrCode);
         }
     }
 }

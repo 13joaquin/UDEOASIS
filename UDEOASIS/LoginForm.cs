@@ -18,7 +18,7 @@ namespace UDEOASIS
         public LoginForm()
         {
             InitializeComponent();
-            on.ConnectionString = @"server=localhost;database=udeo_info;userid=root;password=;";
+            on.ConnectionString = @"server=localhost;database= udeo_info;userid=root;password=;";
             Titulos();
 
         }
@@ -52,18 +52,18 @@ namespace UDEOASIS
                 on.Open();
                 cmd = new MySqlCommand();
                 cmd.Connection = on;
-                cmd.CommandText = "SELECT * FROM login_info WHERE Username = '" + textUSER.Text + "' AND Password = '" + textPASS.Text + "' ";
+                cmd.CommandText = "SELECT * FROM  login_info WHERE Username = '" + textUSER.Text + "' AND Password = '" + textPASS.Text + "' ";
                 rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {
-                    MessageBox.Show("Successful");
+                    MessageBox.Show("Inicio de Secion completa");
                     this.Hide();
                     LoadingForm mf = new LoadingForm();
                     mf.Show();
                 }
                 else
                 {
-                    MessageBox.Show("Not Successful, Por favor ingreso usuario y contrseña");
+                    MessageBox.Show("No Inicio de Seccion, Por favor ingreso usuario y contrseña");
                 }
             }
             finally
