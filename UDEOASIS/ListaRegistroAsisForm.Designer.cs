@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            datagridRecord = new DataGridView();
             btn_PrintData = new Button();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -37,7 +37,7 @@
             pictureBox1 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox7 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)datagridRecord).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -50,7 +50,7 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.FromArgb(61, 42, 85);
-            label1.Font = new Font("Gill Sans MT", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Gill Sans MT", 18F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(210, 14);
             label1.Name = "label1";
@@ -58,23 +58,24 @@
             label1.TabIndex = 3;
             label1.Text = "Lista Registro de Asistencia de Estudiantes";
             // 
-            // dataGridView1
+            // datagridRecord
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(10, 60);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(906, 262);
-            dataGridView1.TabIndex = 4;
+            datagridRecord.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datagridRecord.Location = new Point(10, 60);
+            datagridRecord.Margin = new Padding(3, 2, 3, 2);
+            datagridRecord.Name = "datagridRecord";
+            datagridRecord.RowHeadersWidth = 51;
+            datagridRecord.RowTemplate.Height = 29;
+            datagridRecord.Size = new Size(906, 262);
+            datagridRecord.TabIndex = 4;
+            datagridRecord.CellContentClick += datagridRecord_CellContentClick;
             // 
             // btn_PrintData
             // 
             btn_PrintData.BackColor = Color.FromArgb(238, 172, 25);
             btn_PrintData.FlatAppearance.BorderSize = 0;
             btn_PrintData.FlatStyle = FlatStyle.Flat;
-            btn_PrintData.Font = new Font("Dubai", 14.2499981F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_PrintData.Font = new Font("Dubai", 14.2499981F, FontStyle.Bold);
             btn_PrintData.Image = Properties.Resources.descargar_pdf_icon;
             btn_PrintData.ImageAlign = ContentAlignment.MiddleRight;
             btn_PrintData.Location = new Point(378, 378);
@@ -85,6 +86,7 @@
             btn_PrintData.Text = "PrintData";
             btn_PrintData.TextAlign = ContentAlignment.MiddleLeft;
             btn_PrintData.UseVisualStyleBackColor = false;
+            btn_PrintData.Click += btn_PrintData_Click;
             // 
             // pictureBox2
             // 
@@ -165,13 +167,14 @@
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(btn_PrintData);
-            Controls.Add(dataGridView1);
+            Controls.Add(datagridRecord);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "ListaRegistroAsisForm";
             Text = "ListaRegistroAsisForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += ListaRegistroAsisForm_Load_1;
+            ((System.ComponentModel.ISupportInitialize)datagridRecord).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -185,7 +188,7 @@
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView datagridRecord;
         private Button btn_PrintData;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
