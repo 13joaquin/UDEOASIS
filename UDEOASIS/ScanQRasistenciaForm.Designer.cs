@@ -58,9 +58,19 @@
             radioBtn_NoAsistencia = new RadioButton();
             btn_AbrirIMGQR = new Button();
             btn_UpdateAsis = new Button();
+            pictureBox4 = new PictureBox();
+            pictureBox10 = new PictureBox();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox6 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBx_Camara).BeginInit();
             groupBx_PelEstudiante.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PicShowPhoto).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // comboBox_FIL
@@ -88,7 +98,7 @@
             // pictureBx_Camara
             // 
             pictureBx_Camara.BorderStyle = BorderStyle.FixedSingle;
-            pictureBx_Camara.Location = new Point(53, 120);
+            pictureBx_Camara.Location = new Point(52, 101);
             pictureBx_Camara.Margin = new Padding(3, 2, 3, 2);
             pictureBx_Camara.Name = "pictureBx_Camara";
             pictureBx_Camara.Size = new Size(132, 142);
@@ -339,7 +349,7 @@
             lbl_Time.AutoSize = true;
             lbl_Time.BackColor = Color.Transparent;
             lbl_Time.Font = new Font("Dubai", 12F);
-            lbl_Time.Location = new Point(858, 27);
+            lbl_Time.Location = new Point(859, 27);
             lbl_Time.Name = "lbl_Time";
             lbl_Time.Size = new Size(44, 27);
             lbl_Time.TabIndex = 7;
@@ -350,7 +360,7 @@
             lbl_Date.AutoSize = true;
             lbl_Date.BackColor = Color.Transparent;
             lbl_Date.Font = new Font("Dubai", 12F);
-            lbl_Date.Location = new Point(694, 9);
+            lbl_Date.Location = new Point(742, 9);
             lbl_Date.Name = "lbl_Date";
             lbl_Date.Size = new Size(43, 27);
             lbl_Date.TabIndex = 6;
@@ -359,57 +369,133 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(807, 91);
+            label2.Font = new Font("Dubai Medium", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(797, 93);
             label2.Name = "label2";
-            label2.Size = new Size(47, 15);
+            label2.Size = new Size(66, 25);
             label2.TabIndex = 8;
             label2.Text = "Marcar:";
             // 
             // radioBtn_Asistencia
             // 
             radioBtn_Asistencia.AutoSize = true;
+            radioBtn_Asistencia.BackColor = Color.FromArgb(238, 172, 25);
+            radioBtn_Asistencia.Font = new Font("Dubai", 11.25F);
             radioBtn_Asistencia.Location = new Point(780, 120);
             radioBtn_Asistencia.Margin = new Padding(3, 2, 3, 2);
             radioBtn_Asistencia.Name = "radioBtn_Asistencia";
-            radioBtn_Asistencia.Size = new Size(78, 19);
+            radioBtn_Asistencia.Size = new Size(102, 29);
             radioBtn_Asistencia.TabIndex = 9;
             radioBtn_Asistencia.TabStop = true;
-            radioBtn_Asistencia.Text = "Asistencia";
-            radioBtn_Asistencia.UseVisualStyleBackColor = true;
+            radioBtn_Asistencia.Text = "Asistencia   ";
+            radioBtn_Asistencia.UseVisualStyleBackColor = false;
             // 
             // radioBtn_NoAsistencia
             // 
             radioBtn_NoAsistencia.AutoSize = true;
+            radioBtn_NoAsistencia.BackColor = Color.FromArgb(238, 172, 25);
+            radioBtn_NoAsistencia.Font = new Font("Dubai", 11.25F);
             radioBtn_NoAsistencia.Location = new Point(780, 152);
             radioBtn_NoAsistencia.Margin = new Padding(3, 2, 3, 2);
             radioBtn_NoAsistencia.Name = "radioBtn_NoAsistencia";
-            radioBtn_NoAsistencia.Size = new Size(97, 19);
+            radioBtn_NoAsistencia.Size = new Size(104, 29);
             radioBtn_NoAsistencia.TabIndex = 10;
             radioBtn_NoAsistencia.TabStop = true;
-            radioBtn_NoAsistencia.Text = "No Asistencia";
-            radioBtn_NoAsistencia.UseVisualStyleBackColor = true;
+            radioBtn_NoAsistencia.Text = "Inasistencia ";
+            radioBtn_NoAsistencia.UseVisualStyleBackColor = false;
             // 
             // btn_AbrirIMGQR
             // 
-            btn_AbrirIMGQR.Location = new Point(778, 191);
+            btn_AbrirIMGQR.BackColor = Color.FromArgb(61, 42, 85);
+            btn_AbrirIMGQR.FlatAppearance.BorderSize = 0;
+            btn_AbrirIMGQR.FlatStyle = FlatStyle.Flat;
+            btn_AbrirIMGQR.Font = new Font("Dubai", 14.2499981F, FontStyle.Bold);
+            btn_AbrirIMGQR.ForeColor = Color.White;
+            btn_AbrirIMGQR.Image = Properties.Resources.abrir_qr_icon;
+            btn_AbrirIMGQR.ImageAlign = ContentAlignment.MiddleRight;
+            btn_AbrirIMGQR.Location = new Point(761, 234);
             btn_AbrirIMGQR.Margin = new Padding(3, 2, 3, 2);
             btn_AbrirIMGQR.Name = "btn_AbrirIMGQR";
-            btn_AbrirIMGQR.Size = new Size(117, 28);
+            btn_AbrirIMGQR.Size = new Size(136, 41);
             btn_AbrirIMGQR.TabIndex = 11;
             btn_AbrirIMGQR.Text = "Abrir QR";
-            btn_AbrirIMGQR.UseVisualStyleBackColor = true;
+            btn_AbrirIMGQR.TextAlign = ContentAlignment.MiddleLeft;
+            btn_AbrirIMGQR.UseVisualStyleBackColor = false;
             btn_AbrirIMGQR.Click += btn_AbrirIMGQR_Click;
             // 
             // btn_UpdateAsis
             // 
-            btn_UpdateAsis.Location = new Point(778, 234);
+            btn_UpdateAsis.BackColor = Color.FromArgb(162, 24, 46);
+            btn_UpdateAsis.FlatAppearance.BorderSize = 0;
+            btn_UpdateAsis.FlatStyle = FlatStyle.Flat;
+            btn_UpdateAsis.Font = new Font("Dubai", 14.2499981F, FontStyle.Bold);
+            btn_UpdateAsis.ForeColor = Color.White;
+            btn_UpdateAsis.Image = Properties.Resources.actualizar_flecha_icon;
+            btn_UpdateAsis.ImageAlign = ContentAlignment.MiddleRight;
+            btn_UpdateAsis.Location = new Point(761, 298);
             btn_UpdateAsis.Margin = new Padding(3, 2, 3, 2);
             btn_UpdateAsis.Name = "btn_UpdateAsis";
-            btn_UpdateAsis.Size = new Size(117, 28);
+            btn_UpdateAsis.Size = new Size(136, 41);
             btn_UpdateAsis.TabIndex = 12;
             btn_UpdateAsis.Text = "Update";
-            btn_UpdateAsis.UseVisualStyleBackColor = true;
+            btn_UpdateAsis.TextAlign = ContentAlignment.MiddleLeft;
+            btn_UpdateAsis.UseVisualStyleBackColor = false;
             btn_UpdateAsis.Click += btn_UpdateAsis_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.triangulo2;
+            pictureBox4.Location = new Point(583, 11);
+            pictureBox4.Margin = new Padding(3, 2, 3, 2);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(36, 54);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 33;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = Properties.Resources.circulo_negro;
+            pictureBox10.Location = new Point(12, 9);
+            pictureBox10.Margin = new Padding(3, 2, 3, 2);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(22, 33);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 35;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.circulo_negro;
+            pictureBox1.Location = new Point(652, 43);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(11, 20);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 36;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.triangulo2;
+            pictureBox2.Location = new Point(71, 11);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(17, 27);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 37;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.medio_circulo;
+            pictureBox6.Location = new Point(669, 6);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(31, 45);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 40;
+            pictureBox6.TabStop = false;
             // 
             // ScanQRasistenciaForm
             // 
@@ -417,6 +503,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(927, 462);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
+            Controls.Add(pictureBox10);
+            Controls.Add(pictureBox4);
             Controls.Add(btn_UpdateAsis);
             Controls.Add(btn_AbrirIMGQR);
             Controls.Add(radioBtn_NoAsistencia);
@@ -440,6 +531,11 @@
             groupBx_PelEstudiante.ResumeLayout(false);
             groupBx_PelEstudiante.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)PicShowPhoto).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -476,5 +572,10 @@
         private RadioButton radioBtn_NoAsistencia;
         private Button btn_AbrirIMGQR;
         private Button btn_UpdateAsis;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox10;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox6;
     }
 }

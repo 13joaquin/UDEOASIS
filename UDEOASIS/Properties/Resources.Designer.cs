@@ -63,6 +63,26 @@ namespace UDEOASIS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abrir_qr_icon {
+            get {
+                object obj = ResourceManager.GetObject("abrir-qr icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap actualizar_flecha_icon {
+            get {
+                object obj = ResourceManager.GetObject("actualizar-flecha icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap actualizar_icon {
             get {
                 object obj = ResourceManager.GetObject("actualizar icon", resourceCulture);
