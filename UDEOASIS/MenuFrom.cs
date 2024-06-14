@@ -98,7 +98,10 @@ namespace UDEOASIS
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            AbrirFormularioHija(new LoginForm());
+            this.Hide();
+            LoginForm lf = new LoginForm();
+            MessageBox.Show("Seccion Cerrar");
+            lf.Show();
         }
 
         private void btn_ScanQR_Click(object sender, EventArgs e)

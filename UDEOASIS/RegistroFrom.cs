@@ -84,6 +84,8 @@ namespace UDEOASIS
             txtEmail.Clear();
             txtTelefono.Clear();
             txtCurso.Clear();
+            picUP.Image = null;
+            picBxQR.Image = null;
         }
 
         private void radioBtnMasculino_CheckedChanged(object sender, EventArgs e)

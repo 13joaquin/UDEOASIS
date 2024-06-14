@@ -121,10 +121,8 @@ namespace UDEOASIS
                     txtNombre.Text = dr["Nombre"].ToString();
                     txtApellido.Text = dr["Apellido"].ToString();
                     txtEmail.Text = dr["EmailAddress"].ToString();
-                    txt_Fecha.Text = dr["FechaCumpleaños"].ToString();
                     txtCurso.Text = dr["Curso"].ToString();
                     txtTelefono.Text = dr["Telefono"].ToString();
-                    txt_Genero.Text = dr["Genero"].ToString();
 
                     byte[] img = (byte[])dr["Photo"];
                     MemoryStream ms = new MemoryStream(img);
@@ -133,6 +131,7 @@ namespace UDEOASIS
                     //MarkAttendance(qrCode);
                 }
                 cone.Close();
+                //Limpiar();
             }
             catch (Exception ex)
             {
@@ -141,32 +140,25 @@ namespace UDEOASIS
                     cone.Close();
             }
         }
-        
+
         string ASIS;
         private void MarkAttendance(string qrCode)
         {
             try
             {
                 cone.Open();
-                string query = "INSERT INTO attendance_tb (ID, Nombre, Apellido, EmailAddress, FechaCumpleaños, Curso, Telefono, Genero, TiempoEntrada, Asistencia, Photo) " +
-                               "VALUES (@ID_carne, @Nombre, @Apellido, @EmailAddress, @FechaCumpleaños, @Curso, @Telefono, @Genero, @TiempoEntrada, @Asistencia, @Photo)";
+                string query = "INSERT INTO attendance_tbl (ID, Nombre, Apellido, EmailAddress, Curso, Telefono, Hora, Asistencia, Fecha) " +
+                               "VALUES (@ID, @Nombre, @Apellido, @EmailAddress, @Curso, @Telefono,  @Hora, @Asistencia, @Fecha)";
                 MySqlCommand command = new MySqlCommand(query, cone);
                 command.Parameters.AddWithValue("@ID", txt_ID.Text);
                 command.Parameters.AddWithValue("@Nombre", txtNombre.Text);
                 command.Parameters.AddWithValue("@Apellido", txtApellido.Text);
                 command.Parameters.AddWithValue("@EmailAddress", txtEmail.Text);
-                command.Parameters.AddWithValue("@FechaCumpleaños", txt_Fecha.Text);
                 command.Parameters.AddWithValue("@Curso", txtCurso.Text);
                 command.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
-                command.Parameters.AddWithValue("@Genero", txt_Genero.Text);
-                command.Parameters.AddWithValue("@TiempoEntrada", lbl_Time.Text);
+                command.Parameters.AddWithValue("@Hora", lbl_Time.Text);
                 command.Parameters.AddWithValue("@Asistencia", ASIS);
-                //DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
-
-                MemoryStream ms = new MemoryStream();
-                PicShowPhoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                byte[] photo = ms.ToArray();
-                command.Parameters.AddWithValue("@Photo", photo);
+                command.Parameters.AddWithValue("@Fecha", lbl_Date.Text);
 
                 command.ExecuteNonQuery();
                 cone.Close();
@@ -321,8 +313,17 @@ namespace UDEOASIS
             txtEmail.Clear();
             txtCurso.Clear();
             txtTelefono.Clear();
-            txt_Genero.Clear();
+            PicShowPhoto.Image = null;
+        }
 
+        private void radioBtn_Asistencia_CheckedChanged(object sender, EventArgs e)
+        {
+            ASIS = "Asistencia";
+        }
+
+        private void radioBtn_NoAsistencia_CheckedChanged(object sender, EventArgs e)
+        {
+            ASIS = "Inasistencia";
         }
     }
 }
