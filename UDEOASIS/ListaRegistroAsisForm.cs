@@ -29,7 +29,7 @@ namespace UDEOASIS
                 con.Open();
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = con;
-                string query = "select * from attendance_tb";
+                string query = "SELECT * FROM attendance_tbl";
                 cmd.CommandText = query;
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
