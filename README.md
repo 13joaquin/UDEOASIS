@@ -11,7 +11,7 @@ Creación de Sistema de Control de Asistencia sobre la Identificación Estudiant
 ![LogoUDEO](Logo.jpg)
 
 >[!IMPORTANT]
-> Este repositorio esta desitando los siguientes curso de
+> Este repositorio esta destinado para los siguientes curso que son:
 >- SEMINARIO DE ESTADO ACTUAL DE LA TECNOLOGÍA,
 >- INTELIGENCIA ARTIFICIAL II
 >- AUDITORIA DE SISTEMAS II 
