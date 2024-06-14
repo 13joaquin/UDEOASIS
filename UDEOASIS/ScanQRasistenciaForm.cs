@@ -128,7 +128,7 @@ namespace UDEOASIS
 
                     byte[] img = (byte[])dr["Photo"];
                     MemoryStream ms = new MemoryStream(img);
-                    pictureBx_Camara.Image = Image.FromStream(ms);
+                    PicShowPhoto.Image = Image.FromStream(ms);
 
                     //MarkAttendance(qrCode);
                 }
@@ -164,7 +164,7 @@ namespace UDEOASIS
                 //DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
 
                 MemoryStream ms = new MemoryStream();
-                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                PicShowPhoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] photo = ms.ToArray();
                 command.Parameters.AddWithValue("@Photo", photo);
 
@@ -279,7 +279,7 @@ namespace UDEOASIS
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 Image image = Image.FromFile(openFileDialog.FileName);
-                pictureBox1.Image = image;
+                PicShowPhoto.Image = image;
                 DecodeIQR(image);
             }
         }

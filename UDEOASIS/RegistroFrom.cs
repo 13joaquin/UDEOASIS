@@ -47,6 +47,7 @@ namespace UDEOASIS
                 MemoryStream ms = new MemoryStream();
                 picUP.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 byte[] Photo = new byte[ms.Length];
+                ms.Position = 0;
                 ms.Read(Photo, 0, Photo.Length);
 
                 //Connect DB connection
@@ -54,8 +55,8 @@ namespace UDEOASIS
                 MySqlCommand command = new MySqlCommand();
                 command.Connection = connection;
                 command.CommandText = "INSERT INTO registro_tb (ID,Nombre,Apellido,EmailAddress,FechaCumpleaños,Curso,Telefono,Genero,Photo) " +
-                    "values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + dateTime1.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + Genero + "',@foto)";
-                command.Parameters.AddWithValue("@Photo", Photo);
+                    "values ('" + txt_ID.Text + "','" + txtNombre.Text + "','" + txtApellido.Text + "','" + txtEmail.Text + "','" + dateTime1.Text + "','" + txtCurso.Text + "','" + txtTelefono.Text + "','" + Genero + "',@photo)";
+                command.Parameters.AddWithValue("@photo", Photo);
                 command.ExecuteNonQuery();
                 connection.Close();
             }
